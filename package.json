@@ -5,6 +5,9 @@
   "bin": {
     "git-dld": "build/index.js"
   },
+  "files": [
+    "build"
+  ],
   "license": "MIT",
   "scripts": {
     "lint": "eslint . --ext .ts",
