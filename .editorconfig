@@ -1,0 +1,16 @@
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+tab_width = 2
+indent_size = 2
+charset = utf-8
+end_of_line = lf
+indent_style = space
+insert_final_newline = true
+
+# Indentation override for all JS under lib directory
+[*.ts]
+max_line_length = 120
+trim_trailing_whitespace = true
