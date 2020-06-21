@@ -14,9 +14,9 @@ import parseGithubUrl, {ParsedGithubUrl} from 'github-url-parse';
 export const spinner: ora.Ora = ora('Fetching information');
 
 yargs
-  .scriptName('git')
+  .scriptName('git dld')
   .command({
-    command: 'dld [url]',
+    command: '* [url]',
     describe: 'Download the directory or file from GitHub',
     builder: {
       token: {
