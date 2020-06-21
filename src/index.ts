@@ -8,7 +8,7 @@ import ora from 'ora';
 import yargs from 'yargs';
 import {format} from 'util';
 import isGithubUrl from 'is-github-url';
-import {download, githubContentsEndpoint} from './helper';
+import {download, githubContentsEndpoint} from './downloader';
 import parseGithubUrl, {ParsedGithubUrl} from 'github-url-parse';
 
 export const spinner: ora.Ora = ora('Fetching information');
