@@ -1,6 +1,9 @@
 {
   "name": "git-dld",
-  "version": "0.0.11",
+  "description": "Download files or folder from GitHub",
+  "version": "0.0.12",
+  "license": "MIT",
+  "author": "Zeeshan Ahmad <ziishaned@gmail.com>",
   "main": "build/index.js",
   "bin": {
     "git-dld": "./build/index.js"
@@ -8,12 +11,25 @@
   "files": [
     "build"
   ],
-  "license": "MIT",
   "scripts": {
     "lint": "eslint . --ext .ts",
     "build": "rm -rf build && tsc",
     "start": "ts-node ./src/index.ts"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziishaned/git-dld.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ziishaned/git-dld/issues"
+  },
+  "homepage": "https://github.com/ziishaned/git-dld#readme",
+  "keywords": [
+    "git",
+    "clone",
+    "github",
+    "github-downloader"
+  ],
   "dependencies": {
     "github-url-parse": "^0.1.0",
     "is-github-url": "^1.2.2",
