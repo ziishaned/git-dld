@@ -35,6 +35,8 @@ yargs
       const {user, repo, path, branch} = <ParsedGithubUrl>parseGithubUrl(args.url);
       const url: string = format(githubContentsEndpoint, user, repo);
 
+      console.log(`Downloading into '${path}'`);
+
       spinner.start();
       await download(url, path, branch, args.token);
       spinner.stop();
