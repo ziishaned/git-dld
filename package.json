@@ -1,6 +1,6 @@
 {
   "name": "git-dld",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "build/index.js",
   "bin": {
     "git-dld": "./build/index.js"
