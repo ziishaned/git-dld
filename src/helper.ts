@@ -51,7 +51,13 @@ export async function getContents(url: string, token?: string): Promise<GithubCo
     process.exit(1);
   }
 
-  return res.json();
+  const contents: GithubContent[] | GithubContent = await res.json();
+
+  if (Array.isArray(contents)) {
+    return contents;
+  }
+
+  return [contents];
 }
 
 export async function download(baseUrl: string, path: string, branch: string, token?: string): Promise<void> {
