@@ -1,7 +1,4 @@
-<h1 align="center">
-  <img height="150" src="https://i.imgur.com/ssH411M.png" alt="git-dld - download files or folder from GitHub" />
-  <br> git-dld
-</h1>
+<h1 align="center">git-dld</h1>
 <p align="center">
   <a href="https://github.com/ziishaned/git-dld">
     <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="Software License">
