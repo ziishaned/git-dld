@@ -46,5 +46,6 @@ yargs
       process.exit(0);
     },
   })
-  .help()
+  .version()
+  .help('help')
   .showHelpOnFail(false).argv;
