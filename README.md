@@ -1,5 +1,7 @@
 ## git-dld
 
+![Demo](https://i.imgur.com/dARBpUw.gif)
+
 ## Installation
 
 ```bash
