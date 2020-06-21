@@ -1,7 +1,7 @@
 import mkdirp from 'mkdirp';
 import {spinner} from './index';
 import {existsSync, writeFileSync} from 'fs';
-import fetch, {Response, Headers} from 'node-fetch';
+import fetch, {Headers, Response} from 'node-fetch';
 import {parse as parsePath, ParsedPath, resolve as resolvePath} from 'path';
 
 export const githubApiBaseUrl: string = 'https://api.github.com';
@@ -27,9 +27,7 @@ export async function getBlobs(url: string, token?: string): Promise<Blob> {
     process.exit(1);
   }
 
-  const resJson: Blob = await res.json();
-
-  return resJson;
+  return res.json();
 }
 
 export async function getContents(url: string, token?: string): Promise<GithubContent[]> {
@@ -53,9 +51,7 @@ export async function getContents(url: string, token?: string): Promise<GithubCo
     process.exit(1);
   }
 
-  const resJson: GithubContent[] = await res.json();
-
-  return resJson;
+  return res.json();
 }
 
 export async function download(baseUrl: string, path: string, branch: string, token?: string): Promise<void> {
@@ -69,8 +65,8 @@ export async function download(baseUrl: string, path: string, branch: string, to
       const blob: GithubBlob = await getBlobs(content.git_url, token);
 
       const parsedPath: ParsedPath = parsePath(content.path);
-      const directoryPath: string = resolvePath(`${__dirname}/${parsedPath.dir}`);
-      const filePath: string = resolvePath(`${__dirname}/${content.path}`);
+      const directoryPath: string = resolvePath(`${process.cwd()}/${parsedPath.dir}`);
+      const filePath: string = resolvePath(`${process.cwd()}/${content.path}`);
       if (!existsSync(directoryPath)) {
         mkdirp.sync(directoryPath);
       }
